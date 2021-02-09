@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CatApp.Controllers
 {
-    public class CatController : Controller
+    public class HomeController : Controller
     {
         public IActionResult Index()
         {
