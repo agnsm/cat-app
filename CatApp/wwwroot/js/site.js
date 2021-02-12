@@ -1,19 +1,11 @@
 ﻿
-const logo = document.getElementsByClassName("navbar-brand")[0];
-logo.addEventListener("mouseenter", function (e) {
-    e.target.style.letterSpacing = "2px";
-    }, false);
-logo.addEventListener("mouseleave", function (e) {
-    e.target.style.letterSpacing = "";
+/*const logo = document.getElementsByClassName("navbar-brand")[0];
+window.addEventListener("load", function (e) {
+    logo.style.letterSpacing = "2px";
 }, false);
-
-const catImage = document.getElementsByClassName(".js-tilt")[0];
-logo.addEventListener("mouseenter", function (e) {
-    e.target.style.letterSpacing = "2px";
-}, false);
-logo.addEventListener("mouseleave", function (e) {
-    e.target.style.letterSpacing = "";
-}, false);
+*//*catImage.addEventListener("mouseleave", function (e) {
+    logo.style.letterSpacing = "";
+}, false);*/
 
 $(document).ready(function () {
     $('.js-tilt').tilt({
