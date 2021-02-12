@@ -12,5 +12,10 @@ namespace CatApp.Controllers
         {
             return View();
         }
+
+        public IActionResult CatImage()
+        {
+            return View();
+        }
     }
 }

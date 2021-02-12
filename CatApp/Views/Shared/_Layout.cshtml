@@ -14,7 +14,7 @@
     <div class="h-100 d-flex flex-column">
         <nav class="navbar navbar-expand-sm navbar-light">
             <div class="container-fluid p-0 px-md-4">
-                <a class="navbar-brand m-0" asp-area="" asp-controller="Home" asp-action="Index">CatApp</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CatApp</a>
                 <button class="navbar-toggler dark-accent" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -22,22 +22,22 @@
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav text-center">
                         <li class="nav-item d-flex flex-column flex-sm-row align-items-center">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">cat pictures</a>
+                            <a class="nav-link px-2 text-dark" asp-area="" asp-controller="Home" asp-action="CatImage">cat pictures</a>
                             <i class="fas fa-cat"></i>
                         </li>
                         <li class="nav-item d-flex flex-column flex-sm-row align-items-center">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">cat gifs</a>
+                            <a class="nav-link px-2 text-dark" asp-area="" asp-controller="Home" asp-action="Index">cat gifs</a>
                             <i class="fas fa-cat"></i>
                         </li>
                         <li class="nav-item d-flex flex-column flex-sm-row align-items-center">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">cat facts</a>
+                            <a class="nav-link px-2 text-dark" asp-area="" asp-controller="Home" asp-action="Index">cat facts</a>
                             <i class="fas fa-cat"></i>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <main class="flex-fill">
+        <main class="h-100">
             @RenderBody()
         </main>
         <footer class="mt-auto text-center footer">

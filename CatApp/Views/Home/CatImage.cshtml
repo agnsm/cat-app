@@ -1,0 +1,15 @@
+﻿@model IEnumerable<CatApp.Models.CatModel>
+
+@{
+    ViewData["Title"] = "Cat Images";
+}
+
+<div class="container-fluid h-100 py-3 d-flex flex-lg-row flex-column justify-content-center align-items-center">
+    <div class="d-none d-xl-block p-3 align-self-end img-wrapper">
+        <img src="~/images/image-cat.png" class="js-tilt" />
+    </div>
+    <div class="d-flex flex-column align-items-center random-image-wrapper">
+        <img src="https://via.placeholder.com/700x700" />
+       <button class="btn mt-3">next image</button>
+    </div>
+</div>
