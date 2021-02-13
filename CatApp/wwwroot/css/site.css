@@ -81,7 +81,7 @@ p {
 }
 
 .random-image-wrapper {
-    min-width: 80%;
+    min-width: 85%;
 }
 
 .random-image-wrapper img {
@@ -90,24 +90,20 @@ p {
 }
 
 .btn-next {
-    border: 0 solid #f44806;
+    /*border: 0 solid #f44806;*/
+    font-size: 26px;
+    border: 1px solid rgba(244, 72, 6, 0.5);
     background-color: transparent;
-    outline: 1px solid;
-    outline-color: rgba(244, 72, 6, 1);
-    outline-offset: 0px;
-    transition: all 1s cubic-bezier(0.22, 1.15, 0.57, 0.9);
+    transition: all 0.75s cubic-bezier(0, 0.76, 1, 1);
 }
 
 .btn-next:hover {
-    border: 1px solid #f44806;
-    box-shadow: inset 0 0 40px rgba(244, 72, 6, 0.5);
-    outline-color: rgba(244, 72, 6, 0);
-    outline-offset: 20px;
-    letter-spacing: 1px;
+    box-shadow: inset 250px 0 0 0 rgba(244, 72, 6, 0.5);
+    padding-right: 30px;
 }
 
 .btn-next:focus {
-    outline-color: rgba(244, 72, 6, 1)
+    box-shadow: inset 250px 0 0 0 rgba(244, 72, 6, 0.2),  0px 3px 10px 1px rgba(244, 72, 6, 0.5);
 }
 
 .footer {

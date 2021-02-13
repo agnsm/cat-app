@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CatApp.Models.CatModel>
+﻿@model CatApp.Models.CatModel
 
 @{
     ViewData["Title"] = "Cat Images";
@@ -9,7 +9,7 @@
         <img src="~/images/image-cat.png" class="js-tilt" />
     </div>
     <div class="d-flex flex-column align-items-center random-image-wrapper">
-        <img src="https://via.placeholder.com/700x700" />
-       <button type="button" class="btn-next mt-3">next image</button>
+        <img src="@Html.DisplayFor(model => model.Url)" />
+       <a class="btn p-1 btn-next mt-3" asp-controller="Home" asp-action="CatImage">next image</a>
     </div>
 </div>
