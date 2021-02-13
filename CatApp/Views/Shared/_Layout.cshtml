@@ -13,7 +13,7 @@
 <body>
     <div class="h-100 d-flex flex-column">
         <nav class="navbar navbar-expand-sm navbar-light">
-            <div class="container-fluid p-0 px-md-4">
+            <div class="container-fluid p-0 px-lg-4">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CatApp</a>
                 <button class="navbar-toggler dark-accent" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -23,15 +23,15 @@
                     <ul class="navbar-nav text-center">
                         <li class="nav-item d-flex flex-column flex-sm-row align-items-center">
                             <a class="nav-link px-2 text-dark" asp-area="" asp-controller="Home" asp-action="CatImage">cat pictures</a>
-                            <i class="fas fa-cat"></i>
+                            <img src="~/images/image-cat.png" class="" />
                         </li>
                         <li class="nav-item d-flex flex-column flex-sm-row align-items-center">
-                            <a class="nav-link px-2 text-dark" asp-area="" asp-controller="Home" asp-action="Index">cat gifs</a>
-                            <i class="fas fa-cat"></i>
+                            <a class="nav-link px-2 text-dark" asp-area="" asp-controller="Home" asp-action="CatGif">cat gifs</a>
+                            <img src="~/images/gif-cat.png" class="" />
                         </li>
                         <li class="nav-item d-flex flex-column flex-sm-row align-items-center">
                             <a class="nav-link px-2 text-dark" asp-area="" asp-controller="Home" asp-action="Index">cat facts</a>
-                            <i class="fas fa-cat"></i>
+                            <img src="~/images/facts-cat.png" class="" />
                         </li>
                     </ul>
                 </div>
@@ -42,7 +42,7 @@
         </main>
         <footer class="mt-auto text-center footer">
             <div class="container">
-                CatApp by <a href="https://www.github.com/agnsm" target="_blank">agnsm</a>
+                <i class="fas fa-cat"></i> CatApp by <a href="https://www.github.com/agnsm" target="_blank">agnsm</a>
             </div>
         </footer>
     </div>

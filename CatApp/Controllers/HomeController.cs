@@ -32,6 +32,12 @@ namespace CatApp.Controllers
             return View(randomCatImage);
         }
 
+        public async Task<IActionResult> CatGifAsync()
+        {
+            var randomCatGif = await _catAPI.GetRandomGifAsync();
+            return View(randomCatGif);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -7,7 +7,6 @@ window.addEventListener("load", function (e) {
     for (let i = 0; i < pages.length; i++) {
         if (page == pages[i]) {
             menu[i].classList.add("active-page");
-            let catIcon = menu[i].nextElementSibling;
         }
     }
 }, false);

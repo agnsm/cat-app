@@ -9,5 +9,6 @@ namespace CatApp.Repositories
     public interface ICatAPI
     {
         Task<CatModel> GetRandomImageAsync();
+        Task<CatModel> GetRandomGifAsync();
     }
 }
