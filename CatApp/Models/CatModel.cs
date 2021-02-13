@@ -7,5 +7,6 @@ namespace CatApp.Models
 {
     public class CatModel
     {
+        public string Url { get; set; }
     }
 }
