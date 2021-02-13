@@ -8,18 +8,10 @@ window.addEventListener("load", function (e) {
         if (page == pages[i]) {
             menu[i].classList.add("active-page");
             let catIcon = menu[i].nextElementSibling;
-            //catIcon.classList.add("active-page");
-            //console.log(menu[i].childNodes);
         }
     }
 }, false);
 
-/*menu.forEach(function (option) {
-    option.addEventListener("click", function (e) {
-        //e.target.classList.add("ul > li > a:hover::after");
-        console.log(e.target.children[0]);
-    }, false);
-});*/
 
 $(document).ready(function () {
     $('.js-tilt').tilt({
