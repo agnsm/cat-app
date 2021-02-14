@@ -1,6 +1,7 @@
 ﻿
 body {
     height: 100vh;
+    overflow: hidden;
 }
 
 nav, footer {
@@ -12,6 +13,10 @@ nav, footer {
     transition: 1s;
 }
 
+.navbar-brand {
+    animation-name: animation-spacing;
+    animation-duration: 1s;
+}
 
 .navbar-brand:hover {
     letter-spacing: 2px;
@@ -36,7 +41,7 @@ ul > li > a::after {
     width: 0;
     content: "";
     height: 2px;
-    background: #567a55;
+    background: #4b8849;
     transition: width 0.1s ease-in, left 0.2s ease-in;
 }
 
@@ -46,17 +51,20 @@ ul > li > a:hover::after {
 }
 
 .active-page {
-    border-left: 5px solid #567a55;
+    border-left: 5px solid #4b8849;
+    color: #000000 !important;
 }
 
 main {
     font-family: 'Roboto Mono', monospace;
-    background-color: #0e0f19;
+    background-image: linear-gradient(to left bottom, #000000, #1c1d31);
     color: #9b5332;
 }
 
 .description-wrapper {
     min-width: 40%;
+    animation: animation-opacity;
+    animation-duration: 3s;
 }
 
 p {
@@ -65,6 +73,8 @@ p {
 
 .img-wrapper img {
     max-width: 90%;
+    animation: animation-slide;
+    animation-duration: 2s;
 }
 
 .img-wrapper::after {
@@ -91,6 +101,8 @@ p {
 .random-image-wrapper img {
     max-height: 60vh;
     max-width: 70vw;
+    animation-name: animation-opacity;
+    animation-duration: 1s;
 }
 
 .random-image-wrapper > div {
@@ -100,21 +112,21 @@ p {
 .btn-next {
     font-size: 26px;
     color: rgba(86, 122, 85, 1);
-    border: 1px solid rgba(86, 122, 85, 0.5);
+    border: 1px solid rgba(75, 136, 73, 0.5);
     background-color: transparent;
     transition: all 1s cubic-bezier(0, 0.76, 1, 1);
 }
 
 .btn-next:hover {
     color: #0e0f19;
-    box-shadow: inset 250px 0 0 0 rgba(86, 122, 85, 0.5);
+    box-shadow: inset 250px 0 0 0 rgba(75, 136, 73, 0.5);
     padding-right: 30px;
     letter-spacing: 1px;
 }
 
 .btn-next:focus {
     color: #0e0f19;
-    box-shadow: inset 250px 0 0 0 rgba(86, 122, 85, 0.2), 0px 3px 10px 1px rgba(86, 122, 85, 0.5);
+    box-shadow: inset 250px 0 0 0 rgba(75, 136, 73, 0.2), 0px 3px 10px 1px rgba(75, 136, 73, 0.5);
 }
 
 .footer {
@@ -144,5 +156,35 @@ html {
 @media (min-width: 992px) {
     html {
         font-size: 26px;
+    }
+}
+
+@keyframes animation-slide {
+    0% {
+        margin-left: 500px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes animation-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes animation-spacing {
+    0% {
+        letter-spacing: 0px;
+    }
+    50% {
+        letter-spacing: 1px;
+    }
+    100% {
+        letter-spacing: 0px;
     }
 }
