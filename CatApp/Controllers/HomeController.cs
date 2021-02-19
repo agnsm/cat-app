@@ -14,11 +14,13 @@ namespace CatApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ICatAPI _catAPI;
+        private readonly ICatFactsAPI _catFactsAPI;
 
-        public HomeController(ILogger<HomeController> logger, ICatAPI catAPI)
+        public HomeController(ILogger<HomeController> logger, ICatAPI catAPI, ICatFactsAPI catFactsAPI)
         {
             _logger = logger;
             _catAPI = catAPI;
+            _catFactsAPI = catFactsAPI;
         }
 
         public IActionResult Index()
@@ -36,6 +38,12 @@ namespace CatApp.Controllers
         {
             var randomCatGif = await _catAPI.GetRandomGifAsync();
             return View(randomCatGif);
+        }
+
+        public async Task<IActionResult> CatFactAsync()
+        {
+            var randomCatFact = await _catFactsAPI.GetRandomFactAsync();
+            return View(randomCatFact);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

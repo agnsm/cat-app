@@ -26,6 +26,7 @@ namespace CatApp
         {
             services.AddControllersWithViews();
             services.AddScoped<ICatAPI, CatAPI>();
+            services.AddScoped<ICatFactsAPI, CatFactsAPI>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

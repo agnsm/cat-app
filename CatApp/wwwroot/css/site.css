@@ -73,7 +73,7 @@ p {
 
 .img-wrapper img {
     max-width: 90%;
-    animation: animation-slide;
+    animation: animation-slide-right;
     animation-duration: 2s;
 }
 
@@ -101,6 +101,13 @@ p {
 .random-image-wrapper img {
     max-height: 60vh;
     max-width: 70vw;
+    animation-name: animation-opacity;
+    animation-duration: 2s;
+}
+
+.random-image-wrapper p {
+    max-width: 70vw;
+    background-image: linear-gradient(to left bottom, #000000, #1c1d31);
     animation-name: animation-opacity;
     animation-duration: 2s;
 }
@@ -159,10 +166,11 @@ html {
     }
 }
 
-@keyframes animation-slide {
+@keyframes animation-slide-right {
     0% {
         margin-left: 500px;
     }
+
     100% {
         margin-left: 0;
     }

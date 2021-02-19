@@ -1,14 +1,14 @@
 ﻿@model CatApp.Models.CatModel
 
 @{
-    ViewData["Title"] = "Cat Images";
+    ViewData["Title"] = "Cat GIFs";
 }
 
 <div class="container-fluid h-100 py-3 d-flex justify-content-center align-items-center">
     <div class="d-flex flex-column flex-lg-row justify-content-around align-items-center random-image-wrapper">
-        <img src="@Html.DisplayFor(model => model.Url)" />
+        <p class="mb-0 p-3 p-sm-5 text-center">@Html.DisplayFor(model => model.Text)</p>
         <div class="mt-5 mt-lg-0">
-            <a class="btn btn-next" asp-controller="Home" asp-action="CatImage">next image</a>
+            <a class="btn btn-next" asp-controller="Home" asp-action="CatFact">next fact</a>
         </div>
     </div>
 </div>

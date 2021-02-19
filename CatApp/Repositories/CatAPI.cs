@@ -1,8 +1,6 @@
 ﻿using CatApp.Models;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -16,12 +14,13 @@ namespace CatApp.Repositories
         {
             client = new HttpClient();
             client.BaseAddress = new Uri("https://api.thecatapi.com/");
+            client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Add("x-api-key", "0b1d77f0-fe78-46b8-8695-017f68141fc2");
         }
 
         private async Task<CatModel> GetRandomAsync(string query, int minWidth, int minHeight)
         {
-            var randomCat = new CatModel();
+            CatModel randomCat = new CatModel();
             HttpResponseMessage response;
             JArray jsonResult;
             string result;
@@ -29,7 +28,6 @@ namespace CatApp.Repositories
             do
             {
                 response = await client.GetAsync(query);
-                response.EnsureSuccessStatusCode();
                 result = await response.Content.ReadAsStringAsync();
                 jsonResult = JArray.Parse(result);
                 width = (int)jsonResult.First["width"];
