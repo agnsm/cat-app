@@ -29,19 +29,19 @@ $(document).ready(function () {
             case pages[0]:
                 $.get("ImageViewComponent", function (data) {
                     $(".view-async").html(data);
-                    setTimeout(() => { e.target.blur(); }, 1000);
+                    e.target.blur();
                 });
                 break;
             case pages[1]:
                 $.get("GifViewComponent", function (data) {
                     $(".view-async").html(data);
-                    setTimeout(() => { e.target.blur(); }, 1000);
+                    e.target.blur();
                 });
                 break;
             case pages[2]:
                 $.get("FactViewComponent", function (data) {
                     $(".view-async").html(data);
-                    setTimeout(() => { e.target.blur(); }, 200);
+                    e.target.blur();
                 });
                 break;
             default: break;
