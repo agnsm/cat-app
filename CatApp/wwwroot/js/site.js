@@ -17,5 +17,43 @@ $(document).ready(function () {
         perspective: 2000,
         scale: 1.1
     });
-});
 
+    $(".btn-next").click(function (e) {
+        e.preventDefault();
+        $(".view-async > img").fadeOut().delay(3000).fadeIn();
+        $(".view-async > p").fadeOut().delay(1000).fadeIn();
+        $(".navbar-toggler").attr("aria-expanded", "false");
+        $(".navbar-collapse").removeClass("show");
+        $("body").css("overflow", "hidden");
+        switch (window.location.pathname.split("/")[2]) {
+            case pages[0]:
+                $.get("ImageViewComponent", function (data) {
+                    $(".view-async").html(data);
+                    setTimeout(() => { e.target.blur(); }, 1000);
+                });
+                break;
+            case pages[1]:
+                $.get("GifViewComponent", function (data) {
+                    $(".view-async").html(data);
+                    setTimeout(() => { e.target.blur(); }, 1000);
+                });
+                break;
+            case pages[2]:
+                $.get("FactViewComponent", function (data) {
+                    $(".view-async").html(data);
+                    setTimeout(() => { e.target.blur(); }, 200);
+                });
+                break;
+            default: break;
+        }
+    });
+
+    $(".navbar-toggler-icon").click(function (e) {
+        let state = $(".navbar-toggler").attr("aria-expanded");
+        if (state == "false")
+            $("body").css("overflow", "auto");
+        else
+            $("body").css("overflow", "hidden");
+
+    });
+});

@@ -34,16 +34,31 @@ namespace CatApp.Controllers
             return View(randomCatImage);
         }
 
+        public IActionResult ImageViewComponent()
+        {
+            return ViewComponent("Image");
+        }
+
         public async Task<IActionResult> CatGifAsync()
         {
             var randomCatGif = await _catAPI.GetRandomGifAsync();
             return View(randomCatGif);
         }
 
+        public IActionResult GifViewComponent()
+        {
+            return ViewComponent("Gif");
+        }
+
         public async Task<IActionResult> CatFactAsync()
         {
             var randomCatFact = await _catFactsAPI.GetRandomFactAsync();
             return View(randomCatFact);
+        }
+
+        public IActionResult FactViewComponent()
+        {
+            return ViewComponent("Fact");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
